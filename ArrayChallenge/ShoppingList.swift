@@ -11,12 +11,22 @@ class ShoppingList {
     
     
     func createShoppingList(withItems items: [String], amountOfEachItem amounts: [String]) -> [String] {
+
+        var newArray : [String] = []
+        for(index, item) in items.enumerated() {
+            
+            newArray.append("\(index + 1). \(item)(\(amounts[index]))")
+            
+        }
         
-       
-        // Implement this function
-        
-        
-        
+        return newArray
     }
     
 }
+
+var groceryItems = ["Bananas", "Apples", "Eggs", "Rolls"]
+
+var itemCount = ["6", "4", "12", "4"]
+
+// var newArray = ShoppingList.createShoppingList(groceryItems, itemCount)
+//["1. Bananas(6)", "2. Apples(4)", "3. Eggs(12)", "4. Rolls(4)"]
